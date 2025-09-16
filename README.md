@@ -91,21 +91,16 @@ Prerrequisitos
 Pasos de instalación
 
     Clonar el repositorio
-    bash
-
-git clone [URL_DEL_REPOSITORIO]
+```
+git clone https://github.com/panivinux/Docker-Compose.git
 cd Docker-Compose
-
-Iniciar los contenedores
-bash
-
 docker-compose up -d
-
+```
 Verificar el estado de los contenedores
-bash
 
+```
 docker-compose ps
-
+```
     Acceder a la aplicación
     Abrir el navegador y navegar a: http://localhost:8080
 
