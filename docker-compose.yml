@@ -1,0 +1,22 @@
+services:
+  db:
+    image: mariadb:10.11
+    container_name: mysql_server
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    image: php:8.5.0beta3-apache
+    container_name: apache_server
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
