@@ -55,6 +55,8 @@ services:
 volumes:
   db_data:
 
+```
+
 🔧 Servicios Configurados
 🗄️ Servicio de Base de Datos (db)
 
