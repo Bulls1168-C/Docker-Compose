@@ -21,12 +21,9 @@ Este proyecto implementa una aplicación web utilizando Docker Compose para gest
 
 ## 🏗️ Arquitectura del Proyecto
 
-Docker-Compose/
-│
-├── app/
-│ └── index.php
-│
-├── docker-compose.yml
+│── app   
+│ └── index.php  
+│── docker-compose.yml
 └── README.md
 
 ## 📦 Configuración Docker Compose
