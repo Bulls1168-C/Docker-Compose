@@ -60,7 +60,9 @@ tree
 
 └── README.md
 
-📦 Configuración Docker Compose
+## 📦 Configuración Docker Compose  
+
+```yaml
 services:
   db:
     image: mariadb:10.11
@@ -83,6 +85,7 @@ services:
 
 volumes:
   db_data:
+
 
 🔧 Construir y Levantar los Contenedores
 ```
