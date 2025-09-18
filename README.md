@@ -40,6 +40,7 @@ git clone https://github.com/movillarroel/Docker-Compose.git
 ```
 
 Salida esperada:
+```
 Clonando en 'Docker-Compose'...
 remote: Enumerating objects: 26, done.
 remote: Counting objects: 100% (26/26), done.
@@ -47,7 +48,7 @@ remote: Compressing objects: 100% (24/24), done.
 remote: Total 26 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
 Recibiendo objetos: 100% (26/26), 14.06 KiB | 625.00 KiB/s, listo.
 Resolviendo deltas: 100% (5/5), listo.
-
+```
 🏗 Arquitectura del Proyecto
 
 tree
