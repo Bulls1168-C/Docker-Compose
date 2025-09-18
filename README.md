@@ -49,7 +49,9 @@ Recibiendo objetos: 100% (26/26), 14.06 KiB | 625.00 KiB/s, listo.
 Resolviendo deltas: 100% (5/5), listo.
 
 🏗 Arquitectura del Proyecto
+
 tree
+
 │── app
 
 │   └── index.php
