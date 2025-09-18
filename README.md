@@ -1,35 +1,61 @@
-📚 README.md - Proyecto Docker Compose
-# 🐳 Proyecto Docker Compose - Grupo 1
+# 📦 Curso: Despliegue de Aplicaciones con Docker  
 
-## 📋 Descripción del Proyecto
-Este proyecto implementa una aplicación web utilizando Docker Compose para gestionar múltiples contenedores que trabajan conjuntamente. La solución incluye un servidor web Apache con PHP y una base de datos MariaDB, proporcionando un entorno completo para el desarrollo y despliegue de aplicaciones web.
+## 🎓 Información del Curso  
+- **Curso:** Despliegue de Aplicaciones con Docker  
+- **Proyecto:** Práctica de Docker Compose  
+- **Profesor:** Ing. Edison Naranjo (CEC-EPN)  
+- **Fecha:** 17 de Septiembre de 2025  
 
-## 👥 Integrantes - Grupo 1 (Municipio de Quito)
-| Nombre | Repositorio GitHub |
-|--------|-------------------|
-| **Carpio Zaquinaula Byron Orlando** | `https://github.com/bcarpio16/Docker-Compose.git` |
-| **Villarroel Vera Milton Orlando** | `https://github.com/movillarroel/Docker-Compose.git` |
-| **Mena Segura Edison Fabián** | `https://github.com/Bulls1168-C/Docker-Compose.git` |
-| **Benavides Freire Alex Vicente** | `https://github.com/abenavides86/Docker-Compose.git` |
-| **Gallardo Nicolalde Marcelo Iván** | `https://github.com/panivinux/Docker-Compose.git` |
+---
 
-## 🎓 Información del Curso
-- **Curso**: Despliegue de Aplicaciones con Docker
-- **Proyecto**: Práctica de Docker Compose
-- **Profesor**: Ing. Edison Naranjo (CEC-EPN)
-- **Fecha**: 15 de Septiembre de 2025
+## 📑 Proyecto – Docker Compose - Grupo 1 – Tarea 2  
 
-## 🏗️ Arquitectura del Proyecto
+### 📋 Descripción del Proyecto  
+Este proyecto implementa una aplicación web utilizando **Docker Compose** para gestionar múltiples contenedores que trabajan conjuntamente.  
 
-│── app   
-│ └── index.php  
+La solución incluye:  
+- Un **servidor web Apache con PHP**  
+- Una **base de datos MariaDB**  
+
+Esto proporciona un entorno completo para el desarrollo y despliegue de aplicaciones web.  
+
+---
+
+## 👥 Integrantes - Grupo 1 (Municipio de Quito)  
+
+| Integrante | Repositorio GitHub |
+|------------|--------------------|
+| Carpio Zaquinaula Byron Orlando | [Repositorio](https://github.com/bcarpio16/Docker-Compose.git) |
+| Villarroel Vera Milton Orlando | [Repositorio](https://github.com/movillarroel/Docker-Compose.git) |
+| Mena Segura Edison Fabián | [Repositorio](https://github.com/Bulls1168-C/Docker-Compose.git) |
+| Benavides Freire Alex Vicente | [Repositorio](https://github.com/abenavides86/Docker-Compose.git) |
+| Gallardo Nicolalde Marcelo Iván | [Repositorio](https://github.com/panivinux/Docker-Compose.git) |
+
+---
+
+## 🏗 Clonar el proyecto  
+
+```
+git clone https://github.com/movillarroel/Docker-Compose.git
+```
+
+Salida esperada:
+Clonando en 'Docker-Compose'...
+remote: Enumerating objects: 26, done.
+remote: Counting objects: 100% (26/26), done.
+remote: Compressing objects: 100% (24/24), done.
+remote: Total 26 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+Recibiendo objetos: 100% (26/26), 14.06 KiB | 625.00 KiB/s, listo.
+Resolviendo deltas: 100% (5/5), listo.
+
+🏗 Arquitectura del Proyecto
+tree
+│── app
+│   └── index.php
 │── docker-compose.yml
-
 └── README.md
 
-## 📦 Configuración Docker Compose
-
-```yaml
+📦 Configuración Docker Compose
 services:
   db:
     image: mariadb:10.11
@@ -53,56 +79,36 @@ services:
 volumes:
   db_data:
 
+🔧 Construir y Levantar los Contenedores
 ```
-
-🔧 Servicios Configurados
-🗄️ Servicio de Base de Datos (db)
-
-    Imagen: mariadb:10.11
-
-    Nombre del contenedor: mysql_server
-
-    Variables de entorno:
-
-        MYSQL_ROOT_PASSWORD=root
-
-        MYSQL_DATABASE=appdb
-
-    Volumen persistente: db_data montado en /var/lib/mysql
-
-🌐 Servicio Web (web)
-
-    Imagen: php:8.5.0beta3-apache
-
-    Nombre del contenedor: apache_server
-
-    Volúmenes: Directorio ./app montado en /var/www/html
-
-    Puertos: Puerto 8080 del host mapeado al puerto 80 del contenedor
-
-    Dependencias: Depende del servicio db
-
-🚀 Instalación y Uso
-Prerrequisitos
-
-    Docker instalado en el sistema
-
-    Docker Compose instalado
-Pasos de instalación
-
-    Clonar el repositorio
-```
-git clone https://github.com/panivinux/Docker-Compose.git
 cd Docker-Compose
 docker-compose up -d
 ```
-Verificar el estado de los contenedores
 
+Salida esperada:
+Creating network "docker-compose_default" with the default driver
+Creating volume "docker-compose_db_data" with default driver
+Creating mysql_server ... done
+Creating apache_server ... done
+
+✅ Validar los contenedores creados
 ```
-docker-compose ps
+docker ps -a
 ```
-    Acceder a la aplicación
-    Abrir el navegador y navegar a: http://localhost:8080
+
+Ejemplo de salida:
+CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS          PORTS                    NAMES
+029ca0fd335d   php:8.5.0beta3-apache     "docker-php-entrypoi…"   23 seconds ago   Up 22 seconds   0.0.0.0:8080->80/tcp     apache_server
+88ada3171a49   mariadb:10.11             "docker-entrypoint.s…"   28 seconds ago   Up 27 seconds   3306/tcp                 mysql_server
+
+🌐 Acceder a la aplicación
+
+Abrir el navegador y navegar a:
+
+👉 http://localhost:8080
+
+
+
 
 
 
