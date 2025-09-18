@@ -25,11 +25,11 @@ Esto proporciona un entorno completo para el desarrollo y despliegue de aplicaci
 
 | Integrante | Repositorio GitHub |
 |------------|--------------------|
-| Carpio Zaquinaula Byron Orlando | [Repositorio](https://github.com/bcarpio16/Docker-Compose.git) |
-| Villarroel Vera Milton Orlando | [Repositorio](https://github.com/movillarroel/Docker-Compose.git) |
-| Mena Segura Edison Fabián | [Repositorio](https://github.com/Bulls1168-C/Docker-Compose.git) |
-| Benavides Freire Alex Vicente | [Repositorio](https://github.com/abenavides86/Docker-Compose.git) |
-| Gallardo Nicolalde Marcelo Iván | [Repositorio](https://github.com/panivinux/Docker-Compose.git) |
+| Carpio Zaquinaula Byron Orlando | https://github.com/bcarpio16/Docker-Compose.git |
+| Villarroel Vera Milton Orlando | https://github.com/movillarroel/Docker-Compose.git |
+| Mena Segura Edison Fabián | https://github.com/Bulls1168-C/Docker-Compose.git |
+| Benavides Freire Alex Vicente | https://github.com/abenavides86/Docker-Compose.git |
+| Gallardo Nicolalde Marcelo Iván | https://github.com/panivinux/Docker-Compose.git |
 
 ---
 
@@ -51,8 +51,11 @@ Resolviendo deltas: 100% (5/5), listo.
 🏗 Arquitectura del Proyecto
 tree
 │── app
+
 │   └── index.php
+
 │── docker-compose.yml
+
 └── README.md
 
 📦 Configuración Docker Compose
