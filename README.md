@@ -62,7 +62,7 @@ tree
 
 ## 📦 Configuración Docker Compose  
 
-```yaml
+```
 services:
   db:
     image: mariadb:10.11
@@ -85,7 +85,7 @@ services:
 
 volumes:
   db_data:
-
+```
 
 🔧 Construir y Levantar los Contenedores
 ```
@@ -94,27 +94,30 @@ docker-compose up -d
 ```
 
 Salida esperada:
+```
 Creating network "docker-compose_default" with the default driver
 Creating volume "docker-compose_db_data" with default driver
 Creating mysql_server ... done
 Creating apache_server ... done
-
+```
 ✅ Validar los contenedores creados
 ```
 docker ps -a
 ```
 
 Ejemplo de salida:
+```
 CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS          PORTS                    NAMES
 029ca0fd335d   php:8.5.0beta3-apache     "docker-php-entrypoi…"   23 seconds ago   Up 22 seconds   0.0.0.0:8080->80/tcp     apache_server
 88ada3171a49   mariadb:10.11             "docker-entrypoint.s…"   28 seconds ago   Up 27 seconds   3306/tcp                 mysql_server
+```
 
 🌐 Acceder a la aplicación
 
 Abrir el navegador y navegar a:
-
+```
 👉 http://localhost:8080
-
+```
 
 
 
